@@ -20,7 +20,7 @@ Add it in your root build.gradle at the end of repositories:
   Step 2. Add the dependency
 
  
-	implementation 'com.github.emil-aliyev:sdk-android:$latest_version'
+	implementation 'com.github.jltech001:android-sdk:$latest_version'
 
 -----------------------------------------------------------
 
@@ -68,9 +68,9 @@ Choose how you want to identify your users uniquely. Note that you can choose on
 Second Step : Get SkyTech SDK credentials 
 ----------------------------------------
 
-1.  Sign in to the  [SkyTech Web platform](https://skybot-web.kapitalbank.az)  and go to the  [**Apps -> Livechat app**](https://skybot-web.kapitalbank.az/apps/webchat)  page.
+1.  Sign in to the  [SkyTech Web platform](https://skybot-web.kapitalbank.az)  and go to the  [*Apps -> Livechat app*](https://skybot-web.kapitalbank.az/apps/webchat)  page.
 2.  Click on Install button, if you didn't installed livechat previously, if yes skip this step
-3.  Next click  **Configure**  then  **SDK**.
+3.  Next click  *Configure*  then  *SDK*.
 4.  Copy the App ID and API key.  
 -----------------------------------------------------------
 
@@ -88,3 +88,13 @@ Sample notification body:
 Use `ChatSdkManager` class in order get state of SDK (whether sdk is visible or not); specifically for handling notification on foreground
 
 	ChatSdkManager.getSdkForegroundState()
+
+
+Logout:
+----------------------------------------
+Call `LogoutSkyTech.logout()` function when you log out in your application. Sample: 
+
+	LogoutSkyTech.logout(
+                deviceToken = "your_fb_token", // your firebase token
+                appId = "app_id"
+            )
