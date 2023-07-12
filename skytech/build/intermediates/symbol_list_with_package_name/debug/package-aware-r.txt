@@ -1,0 +1,10 @@
+com.skytech
+color white
+id progress_bar
+id webView
+layout activity_sky_tech
+string back_again_to_exit
+string chrome_warning
+string no_internet
+string please_wait
+string settings

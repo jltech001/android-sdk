@@ -1,0 +1,1 @@
+/Users/rasulzadayr/AndroidStudioProjects/SkyTech/sdk-android/app/src/main/java/com/skytecksdk/MainActivity.kt

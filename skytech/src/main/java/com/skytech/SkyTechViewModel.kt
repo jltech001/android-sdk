@@ -1,6 +1,5 @@
 package com.skytech
 
-import android.content.Context
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.skytech.data.ApiService
@@ -12,6 +11,7 @@ import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.lang.Exception
 
 
 class SkyTechViewModel : ViewModel() {
@@ -40,7 +40,7 @@ class SkyTechViewModel : ViewModel() {
                 val code = response.code()
                 if (body != null && code == 200) {
                     url.value = body.url
-                }else{
+                } else {
                     sdkErrorState.value = true
                 }
             }

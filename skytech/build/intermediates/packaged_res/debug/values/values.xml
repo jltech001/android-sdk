@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#fff</color>
+    <string name="back_again_to_exit">Please click BACK again to exit</string>
+    <string name="chrome_warning">Please update your Google Chrome app</string>
+    <string name="no_internet">No internet connection!</string>
+    <string name="please_wait">Please wait…</string>
+    <string name="settings">Settings</string>
+</resources>

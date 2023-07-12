@@ -10,12 +10,14 @@ class HttpInterceptor : Interceptor {
     @Throws(IOException::class)
     override fun intercept(chain: Interceptor.Chain): Response {
         val request = chain.request().newBuilder()
+        println("Inside intercept")
 
         CredentialHelper.credential.value?.let {
             request.addHeader("X-HASH-VALUE", it.hashValue)
             request.addHeader("X-APP-ID", it.appId ?: "")
             request.addHeader("X-DEVICE-OS", "android")
             request.addHeader("X-DEVICE-TOKEN", it.firebaseToken ?: "")
+            println("Inside intercept values")
         }
 
 
