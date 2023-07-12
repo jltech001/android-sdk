@@ -96,5 +96,5 @@ Call `LogoutSkyTech.logout()` function when you log out in your application. Sam
 
 	LogoutSkyTech.logout(
                 deviceToken = "your_fb_token", // your firebase token
-                appId = "app_id"
+                appId = "app_id" // your app_id
             )
