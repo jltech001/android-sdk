@@ -22,6 +22,7 @@ import com.skytech.databinding.ActivitySkyTechBinding
 import com.skytech.manager.ChatSdkManager
 import com.skytech.util.CredentialHelper
 import com.skytech.util.Utils.isOnline
+import timber.log.Timber
 import java.lang.ref.WeakReference
 
 class SkyTechActivity : AppCompatActivity() {
@@ -136,8 +137,7 @@ class SkyTechActivity : AppCompatActivity() {
                 request: WebResourceRequest,
                 error: WebResourceError
             ) {
-                val errorMessage = "Error! : $error"
-                showToast(errorMessage)
+                Timber.tag("SkyChat").e("onReceivedError: %s", error)
                 handleLoading(false)
                 super.onReceivedError(view, request, error)
             }
